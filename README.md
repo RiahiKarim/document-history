@@ -1,6 +1,6 @@
 # Document-History
 
-Document-History is an API running on NodeJs, express and MongoDB that allows to store JSON documents and its update history.
+Document-History is an API running on NodeJs, express and MongoDB that allows to store JSON documents and their update history.
 
 It is designed to keep the complete version history of a JSON document in a Mongo Database.
 
