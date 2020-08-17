@@ -2,7 +2,7 @@
   "name": "document-history",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "start": "nodemon",
     "build": "tsc",
@@ -12,7 +12,8 @@
   "keywords": [
     "Nodejs",
     "typescript",
-    "express"
+    "express",
+    "mongoose"
   ],
   "author": "Karim Riahi",
   "license": "MIT",
