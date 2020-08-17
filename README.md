@@ -41,9 +41,12 @@ _Note: There is a postman collection under the `postman` folder that contains ba
 | MONGODB_URI | string | `mongodb://localhost:27017/document-history-db` | URL for MongoDB               |
 
 - Once `.env` is created, run `npm install` to add all packages, then run the command below:
+
   ```
   npm run start
   ```
+
+- _Optional: Import the [Postman](https://www.postman.com/) collection from `postman`folder._
 
 ### License
 
