@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "3db149a8-d9e1-43f4-a931-a1f24ae26eff",
+		"name": "document-history",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "should fail",
+			"item": [
+				{
+					"name": "Empty document Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"documentId\":\"a8319a9c-7a68-407e-859a-63c21fd7660b\",\r\n   \"documentContent\":{\r\n      \"foo\":{\r\n         \"bar\":{\r\n            \"a\":[\"a\", \"b\"],\r\n            \"b\":2,\r\n            \"c\":[ \"x\",\"y\"],\r\n            \"e\":100\r\n         }\r\n      },\r\n      \"buzz\":\"world\"\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empty document content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"documentId\":\"a8319a9c-7a68-407e-859a-63c21fd7660b\",\r\n   \"documentContent\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"document"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "1. Insert new document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"documentId\":\"a8319a9c-7a68-407e-859a-63c21fd7660b\",\r\n   \"documentContent\":{\r\n      \"foo\":{\r\n         \"bar\":{\r\n            \"a\":[\"a\", \"b\"],\r\n            \"b\":2,\r\n            \"c\":[ \"x\",\"y\"],\r\n            \"e\":100\r\n         }\r\n      },\r\n      \"buzz\":\"world\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Insert a new version of a document w/ same content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"documentId\":\"a8319a9c-7a68-407e-859a-63c21fd7660b\",\r\n   \"documentContent\":{\r\n      \"foo\":{\r\n         \"bar\":{\r\n            \"a\":[\"a\", \"b\"],\r\n            \"b\":2,\r\n            \"c\":[ \"x\",\"y\"],\r\n            \"e\":100\r\n         }\r\n      },\r\n      \"buzz\":\"world\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Insert a new version of a document w/ different content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentId\": \"\",\r\n    \"documentContent\": {\"a\": \"1\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"document"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
